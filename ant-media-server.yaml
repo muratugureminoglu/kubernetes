@@ -26,8 +26,10 @@ spec:
       containers:
       - name: ant-media-server
         imagePullPolicy: Always
-        image: muratugureminoglu/ant:test
-        args: ["-g", "true", "-s", "true", "-r", "true", "-m", "cluster", "-h", "127.0.0.1"]
+        image: muratugureminoglu/antmedia:2.4.0.2
+        args: ["-r", "true", "-m", "cluster", "-h", "10.244.1.4"]
         resources:
           requests:
              cpu: 1000m
+      imagePullSecrets:
+      - name: docker
