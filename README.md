@@ -13,3 +13,13 @@ tls:
   hosts:
     - test.antmedia.xyz
 ```
+
+# How to use docker private repository on Kubernetes
+```
+kubectl create secret docker-registry "docker"  --docker-server="https://index.docker.io/v1/" --docker-username="test" --docker-password="test"
+```
+Add to your YAML file the following lines.
+```
+imagePullSecrets:
+      - name: docker
+```
