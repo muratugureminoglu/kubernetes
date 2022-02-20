@@ -23,3 +23,4 @@ Add to your YAML file the following lines.
 imagePullSecrets:
       - name: docker
 ```
+#
