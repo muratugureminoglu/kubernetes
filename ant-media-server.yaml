@@ -39,8 +39,8 @@ spec:
       containers:
       - name: ant-media-server
         imagePullPolicy: Always
-        image: muratugureminoglu/antmedia:2.4.0.2
-        args: ["-r", "true", "-m", "cluster", "-h", "mongodb"]
+        image: muratugureminoglu/antmedia:2.4.2.1
+        args: ["-r", "true", "-m", "cluster", "-h", "mongo"]
         resources:
           requests:
              cpu: 1000m
