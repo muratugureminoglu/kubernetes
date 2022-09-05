@@ -30,9 +30,6 @@ spec:
           image: coturn/coturn
           imagePullPolicy: Always
           ports:
-            # - name: turn-udp
-            #   containerPort: 3000
-            #   protocol: UDP
             - name: turn-port1
               containerPort: 3478
               hostPort: 3478
@@ -68,10 +65,6 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    # - port: 3000
-    #   targetPort: 3000
-    #   protocol: UDP
-    #   name: turn-udp
     - port: 3478
       targetPort: 3478
       protocol: UDP
@@ -80,14 +73,6 @@ spec:
       targetPort: 3478
       protocol: TCP
       name: turn-port2
-    # - port: 3478
-    #   targetPort: 3478
-    #   protocol: TCP
-    #   name: turn-port3
-    # - port: 3479
-    #   targetPort: 3479
-    #   protocol: TCP
-    #   name: turn-port4
     
   selector:
        app.kubernetes.io/name: coturn
