@@ -1,5 +1,4 @@
-# Cloudformation Template 
-
+# AWS ALB Ingress YAML file for Wavelengt Zone (EKS)
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
