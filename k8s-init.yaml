@@ -1,0 +1,11 @@
+      initContainers:
+      - name: init-sys
+        image: busybox:latest
+        command:
+        - /bin/sh
+        - -c
+        - |
+            sysctl -w net.ipv4.ip_local_port_range="1024 65535"
+            sysctl -w net.core.somaxconn="65535"
+        securityContext:
+          privileged: true
