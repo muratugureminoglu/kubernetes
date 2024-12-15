@@ -13,10 +13,14 @@ RUN apt-get update && \
         iputils-ping \
         traceroute \
         software-properties-common \
+        net-tools \
+        tcpdump \
+        nmap \
         build-essential && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /
+
 
 CMD ["/bin/bash"]
